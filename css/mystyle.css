@@ -1,0 +1,16 @@
+.div-centered{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.image-centered{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login{
+	max-width: 650px;
+	height: auto;
+}
