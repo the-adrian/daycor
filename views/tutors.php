@@ -68,25 +68,22 @@
 				    <tr>
 				    	<th>Nombre</th>
 				      	<th>Carrera</th>
-				      	<th>Grado</th>
-				      	<th>Grupo</th>
-				      	<th>Estado</th>
+				      	<th>Correo</th>
+				      	<th>Telefono</th>
 				    </tr>
 				</thead>
 				<tbody>
 				    <tr>
-				    	<td>Perla Coral Ceja Conejo</td>
+				    	<td>Jose Antonio Gordillo</td>
 				      	<td>Tecnologias de la infomacion</td>
-				      	<td>8</td>
-				      	<td>C</td>
-				      	<td>Estadias</td>
+				      	<td>jantonio@utsoe.edu.mx</td>
+				      	<td>456-123-1234</td>
 				    </tr>
 				    <tr>
-				      	<td>Jesús Adrián Ramírez López</td>
+				      	<td>Maximiliano Negrete</td>
 				      	<td>Tecnologias de la informacion</td>
-				      	<td>8</td>
-				      	<td>C</td>
-				      	<td>Normal</td>
+				      	<td>mnegrete@utsoe.edu.mx</td>
+				      	<td>456-812-3421</td>
 				    </tr>
 				</tbody>
 			</table>
