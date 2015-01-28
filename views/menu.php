@@ -21,10 +21,10 @@
 		<section class="top-bar-section">
 			<ul class="right">
 				<li>
-					<a href="profile.php"><i class="fi-torso"></i> <?php echo $_SESSION["username"]; ?></a>
+					<a href="profile.php"><i class="fi-torso"></i> <strong><?php echo $_SESSION["username"]; ?></strong></a>
 				</li>
 				<li>
-					<a href="../controler/closesession.php"><i class="fi-power"></i> Cerrar Sesión</a>
+					<a href="../controler/closesession.php"><i class="fi-power"></i> <strong>Cerrar Sesión</strong></a>
 				</li>
 			</ul>
 		</section>
@@ -45,9 +45,11 @@
 					<i class="fi-home size-72 centered"></i><br/><strong>Empresas</strong>
 				</section>
 			</a>
-			<section class="large-3 small-6 columns button warning efect" >
-				<i class="fi-torso-business size-72 centered"></i><br/><strong>Tutores</strong>
-			</section>
+			<a href="tutors.php">
+				<section class="large-3 small-6 columns button warning efect" >
+					<i class="fi-torso-business size-72 centered"></i><br/><strong>Tutores</strong>
+				</section>
+			</a>
 		</section>
 </body>
 </html>

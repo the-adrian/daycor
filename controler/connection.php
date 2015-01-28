@@ -8,7 +8,7 @@
 	    private $host = "localhost";
 		private $user = "root";
 		private $pswd = "root";
-		private $database = "daycor";
+		private $database = "utsoebd";
 		private $db = "";
 		public $query = "";
 

@@ -5,7 +5,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Daycor (empresas)</title>
+	<title>Daycor (profesores)</title>
 	<link rel="stylesheet" href="../css/foundation.css">
 	<link rel="stylesheet" href="../css/mystyle.css">
 	<link rel="stylesheet" href="../css/foundation-icons.css">
@@ -33,7 +33,7 @@
 				<li class="has-form">
 				  	<div class="row collapse">
 				    	<div class="large-8 small-9 columns">
-				      		<input type="text" placeholder="Buscar empresa">
+				      		<input type="text" placeholder="Buscar profesor">
 				    	</div>
 				    <div class="large-4 small-3 columns">
 				      	<a href="#" class="alert button expand"><i class="fi-magnifying-glass"></i></a>
@@ -41,15 +41,15 @@
 				  	</div>
 				</li>
 				<li class="has-form">
-					<a href="" class="button disabled">Todas</a>
+					<a href="" class="button">Todos</a>
 				</li>
 				<li class="has-form">
-					<a href="" class="button warning">Tic</a>
+					<a href="" class="button warning disabled">Tic</a>
 				</li>
 				<li class="has-form">
 					<a href="" class="button success disabled">Den</a>
 				</li>
-				<li class="has-form"><script src="../js/jquery.js"></script>
+				<li class="has-form">
 					<a href="" class="button info disabled">Mec</a>
 				</li>
 				<li class="has-form">
@@ -63,33 +63,30 @@
 	</nav>
 	<section class="row div-centered">
 		<section class="large-12 small-12 columns">
-			<table class="large-12 small-12 columns hover-table" id="mytable">
+			<table class="large-12 small-12 columns hover-table">
 				<thead>
 				    <tr>
 				    	<th>Nombre</th>
-				      	<th>Descripción</th>
-				      	<th>Ubicación</th>
-				      	<th>Telefono</th>
-				      	<th>Correo</th>
-				      	<th>Giro</th>
+				      	<th>Carrera</th>
+				      	<th>Grado</th>
+				      	<th>Grupo</th>
+				      	<th>Estado</th>
 				    </tr>
 				</thead>
 				<tbody>
 				    <tr>
-				    	<td>ICT Consulting</td>
-				    	<td>Empresa de desarrollo de software</td>
-				    	<td>Salamanca Gto</td>
-				      	<td>464-167-198-12</td>
-				      	<td>ictc@ictc.com.mx</td>
-				      	<td>Servicio</td>
+				    	<td>Perla Coral Ceja Conejo</td>
+				      	<td>Tecnologias de la infomacion</td>
+				      	<td>8</td>
+				      	<td>C</td>
+				      	<td>Estadias</td>
 				    </tr>
 				    <tr>
-				    	<td>Universidad Tecnologica del Suroeste de Guanajuato</td>
-				      	<td>Universidad</td>
-				      	<td>Valle de Santiago</td>
-				      	<td>456-138-1833</td>
-				      	<td>utsoe@utsoe.edu.mx</td>
-				      	<td>Servicio</td>
+				      	<td>Jesús Adrián Ramírez López</td>
+				      	<td>Tecnologias de la informacion</td>
+				      	<td>8</td>
+				      	<td>C</td>
+				      	<td>Normal</td>
 				    </tr>
 				</tbody>
 			</table>
@@ -98,24 +95,11 @@
 				<ul class="pagination">
 					<li class="arroww unavailable"><a href="">&laquo;</a></li>
 					<li class="current"><a href="">1</a></li>
+					<li class=""><a href="">2</a></li>
 					<li class="arrow"><a href="">&raquo;</a></li>
 				</ul>
 			</section>
 	</section>
-	<script src="../js/jquery.js"></script>
-	<script src="../js/prueba.js"></script>
-	<script src="../js/foundation.min.js"></script>
-	<script src="../js/foundation.topbar.js"></script>
-	<script src="../js/foundation.alert.js"></script>
-	<script>
-	$('a.reveal-link').trigger('click');
-	$('a.close-reveal-modal').trigger('click');
-
-	// or directly on the modal
-	$('#myModal').foundation('reveal', 'open');
-	// $('#myModal').foundation('reveal', 'close');
-	</script>
-
-
+	
 </body>
 </html>
