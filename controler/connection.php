@@ -38,9 +38,10 @@
 			return $result;
 		}
 		 public function validateUser($query){
-		 	// echo "Entrando a execQuery<br/>";
+		 	// echo "Entrando a validateUser<br/>";
 			$this->query = $query;
 			$this->makeConnection();
+			// echo $this->query;
 			if (!$result = $this->db->query($query)) {
 				die("Ocurrion un error ejecutandos el query [". $this->db->error ."]");
 			}
@@ -48,6 +49,14 @@
 			$result = $resultdb['numrow'];
 			$this->closeConnection();
 			return $result;
+		 }
+
+		 public function insert($query){
+		 	$this->query = $query;
+		 	$this->makeConnection();
+		 	if (!$this->db->query($query)) {
+		 		die("Ocurrio un error ejecutando el query [".$this->db->error."]");
+		 	}
 		 }
 	}
 	

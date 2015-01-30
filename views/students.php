@@ -1,10 +1,6 @@
 <?php session_start(); if (!isset($_SESSION['username'])) {
 	header('location: ../index.html');}
-	require_once "../controler/combologica.php";
-	// else{
-		
-		// tableStundents();
-	// }	
+	require_once "../controler/combologica.php";	
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -87,45 +83,34 @@
 		<a class="close-reveal-modal">&#215;</a>
 		<form action="../controler/newStudent.php" method="post">
 			<section class="row">
-				<input type="text" placeholder="Nombre" name="name">
+				<input type="text" placeholder="Nombre" name="name" required>
 			</section>
 			<section class="row">
-				<input type="text" placeholder="Apellidos" name="lastname">
+				<input type="text" placeholder="Apellidos" name="lastname" required>
 			</section>
 			<section class="row">
 				<input type="email" placeholder="Correo" name="email">
 			</section>
 			<section class="row">
-				<input type="text" placeholder="Telefono" name="phone">
+				<input type="text" placeholder="Telefono" name="phone" required>
 			</section>
 			<section class="row">
 				<textarea name="address" id="" cols="2" rows="2" placeholder="Direccion"></textarea>
 			</section>
 			<section class="row">
-
-
-			<?php  cmbCar(); ?>
-
-
-
+				<?php  cmbCar(); ?>
 			</section>
 			<section class="row">
 				<section class="large-4 columns">
-					
-
-			<?php  cmbGrad(); ?>
-						
+					<?php  cmbGrad(); ?>
 				</section>
 				<section class="large-4 columns">
-				
-				<?php cmbGrup(); ?>
-
-
+					<?php cmbGrup(); ?>
 				</section>
 				<section class="large-4 columns">
-					<select name="" id="">
-						<option value="" default selected>Activo</option>
-						<option value="">Inactivo</option>
+					<select name="estatus" id="">
+						<option value="1" default selected>Activo</option>
+						<option value="0">Inactivo</option>
 					</select>
 				</section>
 			</section>
