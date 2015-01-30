@@ -1,6 +1,11 @@
 <?php session_start(); if (!isset($_SESSION['username'])) {
-	header('location: ../index.html');
-}?>
+	header('location: ../index.html');}
+	require_once "../controler/combologica.php";
+	// else{
+		
+		// tableStundents();
+	// }	
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -58,38 +63,15 @@
 				<li class="has-form">
 					<a href="" class="button secondary disabled">Pal</a>
 				</li>
+				<li class="has-form">
+					<a href="#"  class="button" data-reveal-id="modalNewStudent"><i class="fi-plus"></i> <strong>Nuevo Alumno</strong></a>
+				</li>
 			</ul>
 		</section>
 	</nav>
 	<section class="row div-centered">
 		<section class="large-12 small-12 columns">
-			<table class="large-12 small-12 columns hover-table">
-				<thead>
-				    <tr>
-				    	<th>Nombre</th>
-				      	<th>Carrera</th>
-				      	<th>Grado</th>
-				      	<th>Grupo</th>
-				      	<th>Estado</th>
-				    </tr>
-				</thead>
-				<tbody>
-				    <tr>
-				    	<td>Perla Coral Ceja Conejo</td>
-				      	<td>Tecnologias de la infomacion</td>
-				      	<td>8</td>
-				      	<td>C</td>
-				      	<td>Estadias</td>
-				    </tr>
-				    <tr>
-				      	<td>Jesús Adrián Ramírez López</td>
-				      	<td>Tecnologias de la informacion</td>
-				      	<td>8</td>
-				      	<td>C</td>
-				      	<td>Normal</td>
-				    </tr>
-				</tbody>
-			</table>
+			<?php require '../controler/logica.php'; ?>
 		</section>
 		<section class="row pagination right">
 				<ul class="pagination">
@@ -100,6 +82,68 @@
 				</ul>
 			</section>
 	</section>
-	
+	<section class="row panel reveal-modal modal-20" id="modalNewStudent" data-reveal>
+		<h3 class="text-center">Nuevo alumno</h3>
+		<a class="close-reveal-modal">&#215;</a>
+		<form action="../controler/newStudent.php" method="post">
+			<section class="row">
+				<input type="text" placeholder="Nombre" name="name">
+			</section>
+			<section class="row">
+				<input type="text" placeholder="Apellidos" name="lastname">
+			</section>
+			<section class="row">
+				<input type="email" placeholder="Correo" name="email">
+			</section>
+			<section class="row">
+				<input type="text" placeholder="Telefono" name="phone">
+			</section>
+			<section class="row">
+				<textarea name="address" id="" cols="2" rows="2" placeholder="Direccion"></textarea>
+			</section>
+			<section class="row">
+
+
+			<?php  cmbCar(); ?>
+
+
+
+			</section>
+			<section class="row">
+				<section class="large-4 columns">
+					
+
+			<?php  cmbGrad(); ?>
+						
+				</section>
+				<section class="large-4 columns">
+				
+				<?php cmbGrup(); ?>
+
+
+				</section>
+				<section class="large-4 columns">
+					<select name="" id="">
+						<option value="" default selected>Activo</option>
+						<option value="">Inactivo</option>
+					</select>
+				</section>
+			</section>
+			<section class="row">
+				<section class="large-6 columns">
+					<button class="button alert expand">Cancelar</button>
+				</section>
+				<section class="large-6 columns">
+					<button class="button success expand" type="submit">Aceptar</button>
+				</section>
+			</section>
+		</form>
+	</section>
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/fastclick.js"></script>
+	<script src="../js/foundation.min.js"></script>
+	<script>
+	  $(document).foundation();
+	</script>
 </body>
 </html>

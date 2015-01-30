@@ -1,5 +1,4 @@
 <?php 
-	// echo "connection<br/>";
 	/**
 	* Clase para la conexión a la base de datos
 	*/
@@ -16,7 +15,7 @@
 		private function makeConnection(){
 			// echo "Entrando a makeConnection<br/>";
 			$this->db= new mysqli($this->host, $this->user, $this->pswd, $this->database);
-			if ($this->db->connect_errno > 0) {
+			if ($db->connect_errno > 0) {
 				die("Imposible conectar con la base de datos [". $this->db->connect_error ."]");
 			}
 		}
@@ -34,10 +33,22 @@
 			if (!$result = $this->db->query($query)) {
 				die("Ocurrion un error ejecutandos el query [". $this->db->error ."]");
 			}
-			$resultdb = $result->fetch_assoc();
+			
 			$this->closeConnection();
-			return $resultdb;
+			return $result;
 		}
+		 public function validateUser($query){
+		 	// echo "Entrando a execQuery<br/>";
+			$this->query = $query;
+			$this->makeConnection();
+			if (!$result = $this->db->query($query)) {
+				die("Ocurrion un error ejecutandos el query [". $this->db->error ."]");
+			}
+			$resultdb = $result->fetch_assoc();
+			$result = $resultdb['numrow'];
+			$this->closeConnection();
+			return $result;
+		 }
 	}
 	
  ?>

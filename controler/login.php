@@ -8,7 +8,7 @@
 	//  Validación del usuario para entrar al sistema
 	$query = "SELECT COUNT(*) AS numrow FROM users WHERE usrname='".$username."' AND usrpsw=SHA('".$pswd."')";
 
-	$isuser = $objdb->execQuery($query);
+	$isuser = $objdb->validateUser($query);
 
 	if ($isuser['numrow'] == '1') {
 		require 'sessions.php';

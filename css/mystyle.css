@@ -53,6 +53,9 @@
 	background-color: #53A93F;
 }
 
+.placeholder{
+	display: none;
+}
 
 @media screen and (max-width:480px) {
 	.efect:hover {
@@ -69,4 +72,8 @@
 		max-width: 100%;
 		height: auto;
 	}
+}
+
+.modal-20{
+	width: 20%;
 }

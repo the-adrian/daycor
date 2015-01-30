@@ -118,20 +118,11 @@
 				</ul>
 			</section>
 	</section>
-	<script src="../js/jquery.js"></script>
-	<script src="../js/prueba.js"></script>
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/fastclick.js"></script>
 	<script src="../js/foundation.min.js"></script>
-	<script src="../js/foundation.topbar.js"></script>
-	<script src="../js/foundation.alert.js"></script>
 	<script>
-	$('a.reveal-link').trigger('click');
-	$('a.close-reveal-modal').trigger('click');
-
-	// or directly on the modal
-	$('#myModal').foundation('reveal', 'open');
-	// $('#myModal').foundation('reveal', 'close');
+	  $(document).foundation();
 	</script>
-
-
 </body>
 </html>
